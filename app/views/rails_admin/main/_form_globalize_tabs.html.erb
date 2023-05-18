@@ -1,8 +1,8 @@
 <div class="controls">
   <ul class="nav nav-tabs" style="margin-top:5px" role='tablist'>
     <% field.tabs.each do |tab| %>
-      <li class="nav-item">
-        <%= link_to tab.label, "#", data: { 'bs-toggle': "tab",  'bs-target': "##{tab.id}" }, class: "nav-link #{'text-danger' unless tab.valid?}", role: 'tab' %>
+      <li class="nav-item" role="presentation">
+        <%= link_to tab.label, "#", data: { 'bs-toggle': "tab",  'bs-target': "##{tab.id}" }, class: "nav-link #{'show active ' if tab.active?}#{'text-danger' unless tab.valid?}", role: 'tab' %>
       </li>
     <% end %>
   </ul>
