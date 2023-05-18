@@ -17,7 +17,7 @@ module RailsAdminGlobalizeField
     end
 
     def method_name
-      "#{super}_attributes".to_sym
+      nested_form ? "#{name}_attributes".to_sym : super
     end
 
     def available_locales
